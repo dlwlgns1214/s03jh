@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데이터 타입</title>
+    <script>
+      var num = 123;
+      var str = "abc";
+      var bit = true;
+
+      console.log('"' + typeof num + "타입" + num + '"의 자료형 변환');
+      console.log(String(num), typeof String(num));
+      console.log(Boolean(num), typeof Boolean(num));
+
+      console.log('"' + typeof str + "타입" + str + '"의 자료형 변환');
+      console.log(Number(str), typeof Number(str));
+      console.log(Boolean(str), typeof Boolean(str));
+
+      console.log('"' + typeof bit + "타입" + bit + '"의 자료형 변환');
+      console.log(String(bit), typeof String(bit));
+      console.log(Number(bit), typeof Number(bit));
+    </script>
+  </head>
+  <body>
+    <script>
+      // 1) 숫자 7700을 문자타입으로 만들어라
+      console.log(Number(7700), typeof String(7700));
+
+      // 2) Boolean false를 문자타입으로 만들어라
+      console.log(Boolean(false), typeof String(false));
+
+      // 3) 문자 1234567을 숫자타입으로 만들어라
+      console.log(String(1234567), typeof Number(1234567));
+
+      // 4)  Boolean false를 숫자타입으로 만들어라
+      console.log(Boolean(false), typeof Number(false));
+
+      // 5) 숫자 33을 불타입(Boolean)으로 만들어라
+      console.log(Number(33), typeof Boolean(33));
+
+      // 6) 문자 abcd를 불타입(Boolean)으로 만들어라
+      console.log(String("abcd"), typeof Boolean("abcd"));
+
+      console.log("===========TEST==================");
+      console.log(str + bit, typeof (str + bit));
+      console.log(num + bit, typeof (num + bit));
+      console.log(num + str, typeof (num + str));
+
+      console.log("===========TIP==================");
+      console.log(num + "", typeof (num + ""));
+      console.log(!num, typeof !num);
+      console.log(!!num, typeof !!num);
+
+      console.log("문자를 숫자로");
+      console.log(str * 1, typeof (str * 1));
+      console.log(+str, typeof +str);
+
+      console.log("Boolean을 숫자로");
+      console.log(bit + "", typeof (bit + ""));
+      console.log(bit * 1, typeof +bit);
+    </script>
+  </body>
+</html>
