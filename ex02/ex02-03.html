@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>231020 연습</title>
+    <style>
+      h1 {
+        color: skyblue;
+      }
+      #result {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+    <script>
+      var korean = +prompt("국어점수를 입력하세요.", "100");
+      var english = +prompt("영어점수를 입력하세요.", "100");
+      var math = +prompt("수학점수를 입력하세요.", "100");
+      var science = +prompt("과학점수를 입력하세요.", "100");
+
+      var result = (korean + english + math + science) / 4;
+      console.log(result);
+      document.write(`<h1>시험성적의 과목 평균</h1>
+      <h2>
+  <pre>
+    국어점수 : ${korean}점
+    영어점수 : ${english}점
+    수학점수 : ${math}점
+    과학점수 : ${science}점
+    <span id="result">평균은 ${result}점 입니다.</span>
+  </pre>
+</h2>`);
+    </script>
+  </head>
+  <body></body>
+</html>

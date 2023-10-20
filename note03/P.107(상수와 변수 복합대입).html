@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.107 상수와 변수(복합대입)</title>
+    <script>
+      const str = "<<복합대입연산자>>\n =====================";
+      console.log("복합대입연산자");
+      console.log("=====================");
+      let a = 10;
+      let b = 7;
+      let c = 11;
+      let d = 13;
+      let e = 11;
+      console.log(str);
+      console.log(`a=${a}, b=${b}, c=${c}, d=${d}, e=${e} 일때`);
+      console.log(`a+2 => ${(a += 2)}`);
+      console.log("a=", a);
+      console.log(`a+2 => ${(a += 2)}`);
+      console.log("a=", a);
+
+      console.log(`b-2 => ${(b -= 2)}`);
+      console.log("b=", b);
+      console.log(`b-2 => ${(b -= 2)}`);
+      console.log("b=", b);
+
+      console.log(`c*2 => ${(c *= 2)}`);
+      console.log("c=", c);
+      console.log(`c*2 => ${(c *= 2)}`);
+      console.log("c=", c);
+
+      console.log(`d/2 => ${(d /= 2)}`);
+      console.log("d=", d);
+      console.log(`d/2 => ${(d /= 2)}`);
+      console.log("d=", d);
+
+      console.log(`e%2 => ${(e %= 2)}`);
+      console.log("e=", e);
+      console.log(`e%2 => ${(e %= 2)}`);
+      console.log("e=", e);
+    </script>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th {
+        background-color: aquamarine;
+        text-align: center;
+        width: 25%;
+        border: 1px solid gray;
+      }
+      td {
+        border: 1px solid gray;
+        text-align: center;
+        width: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>상수와 변수, 복합대입연산자</h1>
+    <ul>
+      <li>
+        <h2>const는 변하지 않는 값을 선언할 때 : const 이름 값;</h2>
+      </li>
+      <li>
+        <h2>let은 변할 가능성이 높은 값을 선언할 때 : let 이름 = 값;</h2>
+      </li>
+      <li>
+        <h2>
+          복합대입연산자는 대입연산자와 다른 연산자를 함께 사용하는 연산자
+        </h2>
+        <table>
+          <tr>
+            <th>복합 대입 연산자</th>
+            <th>설명</th>
+            <th>사용 예</th>
+            <th>의미</th>
+          </tr>
+          <tr>
+            <td>+=</td>
+            <td>기존 변수 값에 값을 더합니다</td>
+            <td>a += 1</td>
+            <td>a=a+1</td>
+          </tr>
+          <tr>
+            <td>-=</td>
+            <td>기존 변수 값에 값을 뺍니다</td>
+            <td>a -= 1</td>
+            <td>a=a-1</td>
+          </tr>
+          <tr>
+            <td>*=</td>
+            <td>기존 변수 값에 값을 곱합니다</td>
+            <td>a *= 1</td>
+            <td>a=a*1</td>
+          </tr>
+          <tr>
+            <td>/=</td>
+            <td>기존 변수 값에 값을 나눕니다</td>
+            <td>a /= 1</td>
+            <td>a=a/1</td>
+          </tr>
+          <tr>
+            <td>%=</td>
+            <td>기존 변수 값에 나머지를 구합니다.</td>
+            <td>a %= 1</td>
+            <td>a=%1</td>
+          </tr>
+        </table>
+
+        <ul>
+          <li>+= : a+=1, a=a+1</li>
+          <li>-= : a-=1, a=-+1</li>
+          <li>*= : a*=1, a=a*1</li>
+          <li>/= : a/=1, a=a/1</li>
+          <li>%= : a%=1, a=a%1</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

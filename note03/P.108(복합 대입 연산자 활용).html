@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.108 복합 대입 연산자 활용</title>
+    <script>
+      let list = "";
+      list += "<ul>";
+      list += "<li>Hello 반갑다는 뜻이야</li>";
+      list += "<li>JavaScript로 작성되었어.</li>";
+      list += "</ul>";
+      list += "<H2>&& and </H2>";
+      list += '<table class = "a">';
+      list += "<tr><td>false</td><td>false</td><td>false</td></tr>";
+      list += "<tr><td>true</td><td>false</td><td>false</td></tr>";
+      list += "<tr><td>false</td><td>true</td><td>false</td></tr>";
+      list += "<tr><td>true</td><td>true</td><td>true</td></tr>";
+      list += "</table>";
+
+      list += "<H2>|| or </H2>";
+      list += '<table class = "a">';
+      list += "<tr><td>false</td><td>false</td><td>false</td></tr>";
+      list += "<tr><td>true</td><td>false</td><td>true</td></tr>";
+      list += "<tr><td>false</td><td>true</td><td>true</td></tr>";
+      list += "<tr><td>true</td><td>true</td><td>true</td></tr>";
+      list += "</table>";
+
+      document.write(list);
+    </script>
+    <style>
+      table td {
+        border: 1px solid rgba(76, 63, 197, 0.7);
+      }
+
+      .a {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
