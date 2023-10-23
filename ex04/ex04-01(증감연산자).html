@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>증감연산자</title>
+    <script>
+      let input = prompt("값을 입력하세요.", 10) * 1;
+      let num1 = input;
+
+      console.log("후위연산자");
+      console.log("num1 값이:", num1 + "일때");
+      console.log("num1++:", num1++);
+      console.log("num1++:", num1++);
+      console.log("num1++:", num1++);
+      console.log("num1:", num1);
+      console.log("---------------------");
+      console.log("전위연산자");
+      let num2 = input;
+      console.log("num2값이:", num2 + "일때");
+      console.log("num2+:", ++num2);
+      console.log("num2+:", ++num2);
+      console.log("num2+:", ++num2);
+      console.log("num2:", num2);
+      console.log("---------------------");
+      console.log("연속한 예제");
+      let num3 = input;
+      console.log("num3값이:", num3 + "일때"); //10일때
+      console.log("num3++:", num3++); //10
+      console.log("++num3:", ++num3); //12
+      console.log("num3--:", num3--); //12
+      console.log("++num3:", --num3); //10
+      console.log("num3:", num3); //10
+      console.log("---------------------");
+      if (120 < 1000) {
+        console.log("동작됨");
+      }
+      if (120 > 1000) {
+        console.log("동작안됨");
+      }
+      if ("") {
+        console.log("동작안됨");
+      }
+
+      if ("야") {
+        console.log("동작됨");
+      }
+
+      if (0) {
+        console.log("동작안됨");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

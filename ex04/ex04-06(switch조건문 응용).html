@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch 조건문 응용</title>
+    <script>
+      //아 스트레스
+      const input = prompt("과일명을 입력하세요.", "사과");
+      switch (input) {
+        case "사과":
+          console.log("사과입니다.");
+          break;
+        case "수박":
+          console.log("수박입니다");
+          break;
+        case "딸기":
+          console.log("딸기입니다");
+          break;
+        case "메론":
+          console.log("메론입니다");
+          break;
+        default:
+          alert("재고가 없습니다.");
+          console.log("재고파악중...");
+          break;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

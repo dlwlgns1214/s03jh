@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const jumsu = prompt("점수를 입력해 주세요", 0);
+      //if구문을 사용했을 때
+
+      if (jumsu == 100) {
+        document.write("성적은 A+ 입니다.");
+      }
+      if (jumsu >= 90 && jumsu < 100) {
+        document.write("성적은 A 입니다.");
+      }
+      if (jumsu >= 80 && jumsu < 90) {
+        document.write("성적은 B 입니다.");
+      }
+      if (jumsu >= 70 && jumsu < 80) {
+        document.write("성적은 C 입니다.");
+      }
+      if (jumsu >= 60 && jumsu < 70) {
+        document.write("성적은 D 입니다.");
+      }
+      if (jumsu < 60) {
+        document.write("성적은 F 입니다.");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

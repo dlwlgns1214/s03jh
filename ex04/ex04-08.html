@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>console의 종류</title>
+
+    <script>
+      console.group("제 1그룹");
+      console.log("콘솔에서 보이는 내용입니다.");
+      console.debug("디버그입니다.");
+      console.info("정보를 담은 내용입니다.");
+      console.error("에러입니다");
+      console.groupEnd();
+      console.warn("경고를 표현하는 내용입니다.");
+      console.groupEnd();
+      console.log(
+        "%c강력합니다!",
+        "border: 1px solid red;margin: 20px;color: blue;font-size: 2rem;background-color: yellowgreen"
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

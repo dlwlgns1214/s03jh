@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>외부에서 자바스크립트 가져오기</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+    <script>
+      const now = dayjs();
+      let list = "";
+      list += `<h1>지금시간 :${now}</h1>`;
+      list += `<h2>기본 : ${now.format()}</h2>`;
+      list += `<div>포멧1 : ${now.format("YYYY/MM/DD")}</div>`;
+      list += `<div>포멧2 : ${now.format(
+        "YYYY년, MM월, DD일, hh시mm분ss"
+      )}</div>`;
+      document.write(list);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>거스름돈</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 200px;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        width: 50%;
+        text-align: center;
+      }
+
+      th {
+        background-color: lightskyblue;
+      }
+
+      tr:nth-child(2n) {
+        background-color: beige;
+      }
+    </style>
+    <script>
+      const input = prompt("거스름돈을 입력해주세요.", "");
+      let list = "";
+      list += `<table>`;
+      list += `<tr>`;
+      list += `<th>잔돈</th>`;
+      list += `<th>갯수</th>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `<td>5만원</td>`;
+      list += `<td>${input / 50000}장</td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `<td>1만원</td>`;
+      list += `<td>${input / 10000}장</td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `<td>5천원</td>`;
+      list += `<td>${input / 5000}장</td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      580;
+      list += `<td>1천원</td>`;
+      list += `<td>${input / 1000}장</td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `<td>5백원</td>`;
+      list += `<td>${input / 500}개</td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `<td>1백원</td>`;
+      list += `<td>${input / 100}개</td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `<td>50원</td>`;
+      list += `<td>${input / 50}개</td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `<td>10원</td>`;
+      list += `<td>${input / 10}개</td>`;
+      list += `</tr>`;
+      document.write(list);
+    </script>
+  </head>
+  <body></body>
+</html>

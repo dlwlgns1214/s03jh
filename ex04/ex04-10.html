@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>확률게임 기초</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+    <script>
+      const now = dayjs();
+      const random = now.get("ms");
+      console.log(random);
+      if (random % 2 === 0) {
+        document.write("<h1>당신은 살았습니다.</h1>");
+      } else {
+        document.write("<h1>당신은 죽었습니다.</h1>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

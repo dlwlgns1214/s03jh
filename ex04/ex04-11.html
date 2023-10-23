@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>확률게임 기초</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+    <script>
+      const now = dayjs();
+      const random = now.get("ms");
+      console.log(random);
+      const input = prompt("가위, 바위, 보 중 하나를 선택하세요.", "가위");
+      if (random % 3 === 0) {
+        document.write(
+          "<h1>컴퓨터는 가위 당신은 " +
+            input +
+            "을 내셨어요.</h1><h3>" +
+            random +
+            "</h3>"
+        );
+      }
+      if (random % 3 === 1) {
+        document.write(
+          "<h1>컴퓨터는 바위 당신은 " +
+            input +
+            "을 내셨어요.</h1><h3>" +
+            random +
+            "</h3>"
+        );
+      }
+      if (random % 3 === 2) {
+        document.write(
+          "<h1>컴퓨터는 보 당신은 " +
+            input +
+            "을 내셨어요.</h1><h3>" +
+            random +
+            "</h3>"
+        );
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
