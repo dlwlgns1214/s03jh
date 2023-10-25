@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>랜덤</title>
+    <script>
+      const ran = Math.floor(Math.random() * 100); // 메소드 Math.random() : 0 에서 1 까지의 임의의 값
+      console.log(ran + "%");
+
+      if (ran <= 2) {
+        document.write("레전드 아이템 당첨! ", ran + "%");
+      } else if (ran <= 5) {
+        document.write("유니크 아이템 드랍 ", ran + "%");
+      } else if (ran <= 10) {
+        document.write("레어 아이템 드랍 ", ran + "%");
+      } else {
+        document.write("일반 아이템 버림 ", ran + "%");
+      }
+      // if(ran > 5 && ran <= 10 ){  }
+    </script>
+  </head>
+  <body></body>
+</html>

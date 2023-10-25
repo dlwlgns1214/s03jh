@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>369</title>
+    <script>
+      let list = "";
+      list += `<table>`;
+
+      for (let i = 1; i <= 300; i++) {
+        if (i % 10 == 1) {
+          list += `<tr>`;
+        }
+        if (i % 15 == 0) {
+          console.log("아싸");
+          list += `<td class="a15">"아싸"</td>`;
+        } else if (i % 5 == 0) {
+          console.log("와우");
+          list += `<td class="a5">"와우"</td>`;
+        } else if (i % 3 == 0) {
+          console.log("짝");
+          list += `<td class="a3">"짝"</td>`;
+        } else {
+          console.log(i);
+          list += `<td>${i}</td>`;
+        }
+        if (i % 10 == 0) {
+          list += `</tr>`;
+        }
+      }
+
+      list += `</table>`;
+
+      document.write(list);
+    </script>
+    <style>
+      table {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid black;
+        width: 10%;
+        text-align: center;
+        height: 28px;
+      }
+
+      .a15 {
+        background-color: orange;
+      }
+
+      .a5 {
+        background-color: gold;
+      }
+
+      .a3 {
+        background-color: purple;
+        color: white;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

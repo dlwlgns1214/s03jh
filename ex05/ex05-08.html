@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>splice 예제</title>
+    <script>
+      const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log("arr의 값:", arr);
+      const arr2 = arr.splice(3, 4);
+      console.log("arr2로 추출된값:", arr2, "arr에 남은값:", arr);
+      const arr3 = arr.splice(3, 2);
+      console.log("arr3로 추출된값:", arr3, "arr에 남은값:", arr);
+      arr.splice(2, 0, "a", "b", "c", "d");
+      arr2.splice(2);
+      arr3.splice(2, 0, 10, 11, 12);
+      console.log(
+        "\narr의 값:",
+        arr,
+        "\narr2의 값:",
+        arr2,
+        "\narr3의 값:",
+        arr3
+      );
+    </script>
+  </head>
+  <body>
+    <h3>
+      <pre>
+    다음 배열을 splice메소드를 사용하여 변경하시오.
+    const arr = [1,2,3,4,5,6,7,8,9]
+
+    1) arr = [1,2,3]
+    arr2 = [4,5,6,7] 
+    arr3 = [8,9]
+    로 나눠서 담아라.
+
+    2) arr을 [1,2,3]에서 [1,2,'a','b','c','d',3] 으로 바꾸어라.
+    arr2를 [4,5] 만 남겨라
+    arr3를 [8,9,10,11,12] 로 만들어라.
+    </pre
+      >
+    </h3>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let arr = []; // 추가
+      arr = ["배", "사과", "키위", "바나나"];
+      console.log(arr);
+
+      /* 배를 딸리고 교체 */
+      console.log(arr[0]);
+      arr[0] = "딸기";
+      console.log(arr);
+
+      /* 사과를 없애기 (단, 공백이 남음)*/
+      //   arr[1] = "";
+      //   console.log(arr);
+
+      /* 새로운 과일 추가 (자바스크립트의 유연한 특징) */
+      //   arr[100] = "파인애플";
+      //   console.log(arr);
+
+      /* 배열의 끝에 추가 */
+      arr[arr.length] = "파인애플";
+      console.log(arr);
+
+      /* 초기화 */
+      //   arr = [];
+      //   console.log(arr);
+    </script>
+  </head>
+  <body></body>
+</html>
