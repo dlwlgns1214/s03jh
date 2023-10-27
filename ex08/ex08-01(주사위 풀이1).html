@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주사위</title>
+    <script>
+      let d1 = (d2 = d3 = d4 = d5 = d6 = er = 0);
+      for (let i = 0; i < 10000; i++) {
+        const dice = Math.floor(Math.random() * 6) + 1;
+        if (dice === 1) {
+          d1++;
+        } else if (dice === 2) {
+          d2++;
+        } else if (dice === 3) {
+          d3++;
+        } else if (dice === 4) {
+          d4++;
+        } else if (dice === 5) {
+          d5++;
+        } else if (dice === 6) {
+          d6++;
+        } else {
+          er++;
+        }
+      }
+      console.log(
+        `d1:${d1}\nd2:${d2}\nd3:${d3}\nd4:${d4}\nd5:${d5}\nd6:${d6}\ntotal:${
+          d1 + d2 + d3 + d4 + d5 + d6
+        }`
+      );
+      console.timeEnd("테스트시간");
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.198(예제5-1-1)</title>
+    <script>
+      //변수 생성
+      const 함수 = function () {
+        console.log("함수 내부 코드1");
+        console.log("함수 내부 코드2");
+        console.log("함수 내부 코드3");
+        console.log("");
+      };
+
+      //함수 호출
+      함수(); // 우리가 만든 함수도 기존의 alert(), prompt() 함수처럼 호출가능
+      함수();
+
+      //출력
+      console.log(typeof 함수); //함수의 자료형 확인
+      console.log(함수); //함수 자체도 단순한 자료이므로 출력가능
+    </script>
+  </head>
+  <body></body>
+</html>

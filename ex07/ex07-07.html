@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주사위 만번 던지기</title>
+    <script>
+      const input = prompt("주사위를 몇 번 던지겠습니까.", "10000");
+      let count = 0;
+      let dice1 = 0;
+
+      for (let i = 0; i < input; i++) {
+        const dice = Math.floor(Math.random() * 6) + 1;
+        console.log(dice);
+        document.write(dice);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

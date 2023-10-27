@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속도테스트</title>
+    <script>
+      const arr = Array(1000000)
+        .fill(0)
+        .map((v, i) => i + 1); //샘플데이터 생성
+
+      console.time("for-type0");
+      for (let i = arr.length; i > 0; i--) {}
+      console.timeEnd("for-type0");
+
+      console.time("for-type1");
+      for (let i = 0; i < arr.length; i++) {}
+      console.timeEnd("for-type1");
+
+      console.time("for-type2");
+      for (var i = 0; i < arr.length; i++) {}
+      console.timeEnd("for-type2");
+
+      console.time("for-in");
+      for (const idex in arr) {
+      }
+      console.timeEnd("for-in");
+
+      console.time("for-of");
+      for (const value of arr) {
+      }
+      console.timeEnd("for-of");
+    </script>
+  </head>
+  <body></body>
+</html>
