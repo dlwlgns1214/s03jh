@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const temp = Number(prompt("현재 온도를 입력해주세요.", ""));
+      let result = "";
+      let c1 = (c2 = c3 = c4 = c5 = "white");
+
+      if (temp >= 32) {
+        result = "매우 덥습니다.";
+        c1 = "black";
+      } else if (28 <= temp && temp < 32) {
+        result = "덥습니다.";
+        c2 = "black";
+      } else if (22 <= temp && temp < 28) {
+        result = "보통입니다.";
+        c3 = "black";
+      } else if (16 <= temp && temp < 22) {
+        result = "시원합니다.";
+        c4 = "black";
+      } else {
+        result = "춥습니다.";
+        c5 = "black";
+      }
+
+      let list = "";
+      list += `<table>`;
+      list += `<tr>`;
+      list += `  <td colspan="6">16미만</td>`;
+      list += `  <td colspan="4">16이상 ~ 23미만</td>`;
+      list += `  <td colspan="4">22이상 ~ 28미만</td>`;
+      list += `  <td colspan="3">28이상 ~ 32미만</td>`;
+      list += `  <td colspan="6">32이상</td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `  <td class="u16"></td>`;
+      list += `  <td class="u16"></td>`;
+      list += `  <td class="u16"></td>`;
+      list += `  <td class="u16"></td>`;
+      list += `  <td class="u16"></td>`;
+      list += `  <td class="u16"></td>`;
+      list += `  <td class="u22"></td>`;
+      list += `  <td class="u22"></td>`;
+      list += `  <td class="u22"></td>`;
+      list += `  <td class="u22"></td>`;
+      list += `  <td class="u28"></td>`;
+      list += `  <td class="u28"></td>`;
+      list += `  <td class="u28"></td>`;
+      list += `  <td class="u28"></td>`;
+      list += `  <td class="u32"></td>`;
+      list += `  <td class="u32"></td>`;
+      list += `  <td class="u32"></td>`;
+      list += `  <td class="up32"></td>`;
+      list += `  <td class="up32"></td>`;
+      list += `  <td class="up32"></td>`;
+      list += `  <td class="up32"></td>`;
+      list += `  <td class="up32"></td>`;
+      list += `  <td class="up32"></td>`;
+      list += `</tr>`;
+      list += `<tr>`;
+      list += `  <td colspan="6" style="color:${c5}">${result}</td>`;
+      list += ` <td colspan="4" style="color:${c4}">${result}</td>`;
+      list += `  <td colspan="4" style="color:${c3}">${result}</td>`;
+      list += ` <td colspan="3" style="color:${c2}">${result}</td>`;
+      list += `  <td colspan="6" style="color:${c1}">${result}</td>`;
+      list += `</tr>`;
+      list += `</table>`;
+
+      document.write(
+        list +
+          "<h2>" +
+          "지금 온도는 " +
+          temp +
+          "℃ 이며, 상태는 " +
+          result +
+          "</h2>"
+      );
+    </script>
+    <style>
+      table {
+        width: 100%;
+        min-width: 1200px;
+        height: 100%;
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid black;
+        text-align: center;
+        width: 20px;
+        height: 30px;
+      }
+      .u16 {
+        background-color: purple;
+      }
+      .u22 {
+        background-color: blue;
+      }
+      .u28 {
+        background-color: yellow;
+      }
+      .u32 {
+        background-color: bisque;
+      }
+      .up32 {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

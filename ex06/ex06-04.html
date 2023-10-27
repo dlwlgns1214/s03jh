@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Const와 let의 차이</title>
+    <script>
+      let name = "홍길동";
+      if (1) {
+        let name = "슈퍼맨";
+        console.log(name);
+      }
+      if (true) {
+        let name = "스파이더맨";
+        // name = "스파이더맨";
+        console.log(name);
+      }
+      console.log(name);
+    </script>
+  </head>
+  <body></body>
+</html>

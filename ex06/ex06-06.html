@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열내 요소 크기비교(내림차순)</title>
+  </head>
+  <script>
+    let arr = [14, 33, 13];
+    console.log("정리전 arr", arr);
+
+    if (arr[0] < arr[1]) {
+      arr[3] = arr[0];
+      arr[0] = arr[1];
+      arr[1] = arr[3];
+    }
+    if (arr[0] < arr[2]) {
+      arr[3] = arr[0];
+      arr[0] = arr[2];
+      arr[2] = arr[3];
+    }
+    if (arr[1] < arr[2]) {
+      arr[3] = arr[1];
+      arr[1] = arr[2];
+      arr[2] = arr[3];
+    }
+    console.log(arr);
+    arr.pop();
+    console.log("정리후 arr", arr);
+  </script>
+  <body></body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자의 합(짝수만)</title>
+    <script>
+      const input1 = +prompt("어디부터 계산할까요?", 1);
+      const input2 = +prompt("어디 짝수까지 계산할까요?", 10);
+      let sum = 0;
+      for (let i = input1; i <= input2; i++) {
+        if (i % 2 === 1) {
+          continue;
+        }
+        sum += i; //sum=sum+i
+        document.write(`${input1}부터 ${i}까지의 짝수의 합은 ${sum}<br>`);
+      }
+      document.write(
+        `<hr><h1><strong><mark>최종 짝수의 합은 ${sum} 입니다.</mark></strong></h1>`
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

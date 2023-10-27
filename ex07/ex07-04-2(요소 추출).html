@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>어레이 출력</title>
+    <script>
+      //   const arr = [
+      //     "서울",
+      //     "부산",
+      //     "대구",
+      //     "대전",
+      //     "광주",
+      //     "포항",
+      //     "경주",
+      //     "제주",
+      //   ];
+      const str = "서울/부산/대구/대전/광주/포항/경주/제주";
+      const arr = str.split("/");
+      for (const index in arr) {
+        console.log(`${arr[index]}`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
