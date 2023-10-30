@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고급랜덤</title>
+    <script>
+      const array = new Uint8Array(2);
+      crypto.getRandomValues(array);
+
+      console.log("오늘자 행운의 수 : ");
+      const random1 = Math.floor((array[0] / 255) * 100); // 0~100
+      const random2 = (array[1] % 100) + 1; // 1~100
+      console.log(random1);
+      console.log(random2);
+    </script>
+  </head>
+  <body></body>
+</html>

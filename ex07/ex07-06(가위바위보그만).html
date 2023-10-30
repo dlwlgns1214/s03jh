@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>가위바위보</title>
     <script>
-    let count = 1;
+    let count = 0;
     let winCount = 0;
     let loseCount = 0;
     let drawCount = 0;
@@ -28,25 +28,19 @@
         console.log(userNum, comNum)
         
         if(userNum == 0 && comNum == 2 || userNum == 1 && comNum == 0 || userNum == 2 && comNum == 1){
-          alert("당신이 이겼습니다. \n" + "전체 " + count + " 전\n" + "당신 " + winCount + "승 " + drawCount + "무 " + loseCount +"패");
           winCount= winCount+1; 
-          drawCount=drawCount+0;
-          loseCount=loseCount+0;
-          count++
+          ++count
+          alert("당신이 이겼습니다. \n" + "전체 " + count + " 전\n" + "당신 " + winCount + "승 " + drawCount + "무 " + loseCount +"패");
         }
         else if(userNum == 0 && comNum == 1 || userNum == 1 && comNum == 2 || userNum == 2 && comNum == 0){
+          loseCount= loseCount+1
+          ++count
           alert("당신이 졌습니다. \n" + "전체 " + count + " 전\n" + "당신 " + winCount + "승 " + drawCount + "무 " + loseCount +"패");
-          loseCount= loseCount+1;
-          winCount=winCount+0;
-          drawCount=drawCount+0;
-          count++
         }
         else if(userNum == 0 && comNum == 0 || userNum == 1 && comNum == 1 || userNum == 2 && comNum == 2){
-          alert("비겼습니다." + "전체 " + count + " 전\n" + "당신 " + winCount + "승 " + drawCount + "무 " + loseCount +"패");
           drawCount= drawCount+1;
-          winCount=winCount+0;
-          loseCount=loseCount+0;
-          count++
+          ++count
+          alert("비겼습니다." + "전체 " + count + " 전\n" + "당신 " + winCount + "승 " + drawCount + "무 " + loseCount +"패");
         } else{
           alert("제대로 입력해주세요.")
         }

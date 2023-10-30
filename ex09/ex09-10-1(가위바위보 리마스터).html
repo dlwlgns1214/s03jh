@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function engine() {
+        const array = new Uint8Array(1);
+        crypto.getRandomValues(array);
+        const comNum = array[0] % 3;
+        return comNum;
+      }
+
+      const arr = ["가위", "바위", "보"];
+      let userNum = 0;
+      let count = 0;
+      let winCount = 0;
+      let drawCount = 0;
+      let loseCount = 0;
+      let comNum = 0;
+
+      //   while (true) {
+      // console.log(userNum, comNum);
+
+      // const userChoice = prompt("입력하세요.", "가위");
+      //   if (userNum === "그만") {
+      //     alert("게임을 중지합니다");
+      //     break;
+      //   }
+
+      // else if (userChoice == "가위") userNum = 0;
+      function zzi() {
+        comNum = engine();
+        userNum = 0;
+        gogo();
+      }
+      // else if (userChoice == "바위") userNum = 1;
+      function muk() {
+        comNum = engine();
+        userNum = 1;
+        gogo();
+      }
+      // else if (userChoice == "보") userNum = 2;
+      function bba() {
+        comNum = engine();
+        userNum = 2;
+        gogo();
+      }
+
+      function gogo() {
+        if (
+          (userNum == 0 && comNum == 2) ||
+          (userNum == 1 && comNum == 0) ||
+          (userNum == 2 && comNum == 1)
+        ) {
+          winCount = winCount + 1;
+          ++count;
+          document.write(
+            `<button onclick="zzi()">가위</button>
+    <button onclick="muk()">바위</button>
+    <button onclick="bba()">보</button><br>당신이 이겼습니다. 전체 ${count} 전\n 당신 ${winCount} 승 ${drawCount} 무 ${loseCount} 패\n`
+          );
+          document.close();
+        } else if (
+          (userNum == 0 && comNum == 1) ||
+          (userNum == 1 && comNum == 2) ||
+          (userNum == 2 && comNum == 0)
+        ) {
+          loseCount = loseCount + 1;
+          ++count;
+          document.write(
+            `<button onclick="zzi()">가위</button>
+    <button onclick="muk()">바위</button>
+    <button onclick="bba()">보</button>` +
+              "<br>당신이 졌습니다. \n" +
+              "전체 " +
+              count +
+              " 전\n" +
+              "당신 " +
+              winCount +
+              "승 " +
+              drawCount +
+              "무 " +
+              loseCount +
+              "패"
+          );
+          document.close();
+        } else if (userNum == comNum) {
+          drawCount = drawCount + 1;
+          ++count;
+          document.write(
+            `<button onclick="zzi()">가위</button>
+    <button onclick="muk()">바위</button>
+    <button onclick="bba()">보</button>` +
+              "<br>비겼습니다." +
+              "전체 " +
+              count +
+              " 전\n" +
+              "당신 " +
+              winCount +
+              "승 " +
+              drawCount +
+              "무 " +
+              loseCount +
+              "패"
+          );
+          document.close();
+        } else {
+          document.write("제대로 입력해주세요.");
+          document.close();
+        }
+      }
+      //   }
+    </script>
+  </head>
+  <body>
+    <button onclick="zzi()">가위</button>
+    <button onclick="muk()">바위</button>
+    <button onclick="bba()">보</button>
+  </body>
+</html>

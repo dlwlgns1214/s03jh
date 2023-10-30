@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또번호추천</title>
+    <script>
+      function engine() {
+        const array = new Uint8Array(2);
+        crypto.getRandomValues(array);
+        const ran = array[0] * 3;
+        const ran2 = ((array[1] + ran) % 45) + 1; // 1 ~ 45
+        return ran2;
+      }
+
+      function lot() {
+        const arr = [];
+        while (arr.length < 6) {
+          const random = engine();
+          if (arr.indexOf(random) === -1) arr.push(random);
+        }
+        arr.sort(function (a, b) {
+          return a - b;
+        });
+        document.write(
+          `<button onclick="lot()">로또번호생성</button><h3>${arr}</h3>`
+        );
+        document.close();
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="lot()">로또번호생성</button>
+  </body>
+</html>

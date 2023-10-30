@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호이스팅2</title>
+    <script>
+      //함수선언식은 호이스팅이 되고 함수표현식은 호이스팅이 되지 않으니 상단에 선언해야함
+      fn1();
+      fn2();
+      //함수 선언식
+      function fn1() {
+        console.log("fn1 함수가 실행됨");
+      }
+      //함수표현식은 호이스팅이 되지 않아서 에러가 남
+      const fn2 = function () {
+        console.log("fn2 함수가 실행됨");
+      };
+      fn1();
+      fn2();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ON/OFF</title>
+    <script>
+      off();
+      function on() {
+        document.write(`<button onclick="off()">온/오프</button>
+       <div style="width: 100px;height: 100px;background-color: yellow;"></div>`);
+        document.close();
+      }
+      function off() {
+        document.write(`<button onclick="on()">온/오프</button>
+       <div style="width: 100px;height: 100px;background-color: gray;"></div>`);
+        document.close();
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자 상승 하강</title>
+    <script>
+      let num = 0;
+      go();
+      function up() {
+        num++;
+        go();
+      }
+      function down() {
+        num--;
+        go();
+      }
+      function go() {
+        document.write(
+          `<button onclick="up()">UP</button><button onclick="down()">DOWN</button><div>${num}</div>`
+        );
+        document.close();
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

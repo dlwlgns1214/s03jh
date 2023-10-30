@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수를 실행하게 하는 버튼</title>
+    <script>
+      function fn1() {
+        console.log("fn1이 실행됨");
+        document.close();
+        document.write(
+          `<h1>동작버튼을 누르셨네요!</h1><button onclick="fn1()">동작버튼</button><button onclick="fn2()">정지버튼</button>`
+        );
+        return 1;
+      }
+
+      function fn2() {
+        console.log("fn2이 실행됨");
+        document.close();
+        document.write(
+          `<h1>정지버튼을 누르셨네요!</h1><button onclick="fn1()">동작버튼</button><button onclick="fn2()">정지버튼</button>`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="fn1()">동작버튼</button>
+    <button onclick="fn2()">정지버튼</button>
+  </body>
+</html>
