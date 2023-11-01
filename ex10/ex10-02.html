@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const arr = [11, 22, 33, 44, 55];
+      console.log(1, arr);
+      console.log(2, ...arr);
+
+      function fn1(ar) {
+        console.log(3, ar);
+      }
+      fn1(11, 22, 33, 44, 55);
+
+      function fn2(...ar) {
+        console.log(4, ar);
+      }
+      fn2(1, 2, 3, 4, 5);
+      fn2(arr);
+      fn2(...arr);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이머함수</title>
+    <script>
+      setTimeout(fn1, 2 * 1000);
+      const t2 = setTimeout(fn2, 6 * 1000);
+
+      function fn1() {
+        console.log("우와 비가오네! 그래도 밖으로 나갈까?");
+        let state = confirm("우와 비가오네! 그래도 밖으로 나갈까?");
+        if (!state) {
+          clearTimeout(t2);
+          console.log(`ID:${t2} 타이머가 취소되었습니다.`);
+        }
+      }
+      function fn2() {
+        console.log("");
+        alert("그럼 우산을 준비하자!");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

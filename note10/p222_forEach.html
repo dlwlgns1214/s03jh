@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach()콜백함수</title>
+    <script>
+      const arr = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+
+      arr.forEach(function (value, index, array) {
+        console.log(value);
+      });
+
+      arr.forEach((v) => console.log(v));
+    </script>
+  </head>
+  <body></body>
+</html>

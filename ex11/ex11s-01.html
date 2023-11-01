@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백함수</title>
+    <script>
+      //함수 선언식
+      function fn1(text = 5) {
+        for (let i = 0; i < text; i++) {
+          document.write(`${i}번을 표시합니다.<br>`);
+        }
+      }
+      //함수 표현식
+      const fn2 = function (text = 3) {
+        return text * text;
+      };
+
+      //화살표 함수
+      //   const fn3 = function(){}
+      //   const fn3 = ()=>{}
+      const fn3 = (i = 2) => console.log(i + "안녕");
+
+      //콜백함수
+      function cbTest(num, callback) {
+        console.log(`{sum}숫자를 입력하셨습니다.`);
+        return callback(num);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

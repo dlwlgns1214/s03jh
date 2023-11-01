@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+    <script>
+      const obj = {
+        name: "홍길동",
+        age: 18,
+        address: "부산",
+        score: 99,
+      };
+      const json = JSON.stringify(obj, null, 2);
+      const obj2 = JSON.parse(json);
+      console.log(obj);
+      console.log(json);
+      console.log(JSON.stringify(obj, null, 2)); //띄어쓰기 2칸
+      console.log(obj2);
+    </script>
+  </head>
+  <body></body>
+</html>

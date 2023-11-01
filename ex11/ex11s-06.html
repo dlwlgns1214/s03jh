@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+      const users = [
+        { user: "fred", age: 48 },
+        { user: "barney", age: 36 },
+        { user: "fred", age: 23 },
+        { user: "barney", age: 28 },
+      ];
+      //_. 비공식 유즈맵 느낌?
+      const output1 = _.sortBy(users, (o) => o.user);
+      const output2 = _.sortBy(users, ["user", "age"]);
+      const output3 = _.find(users, (o) => o.age > 30);
+      const output4 = _.orderBy(users, ["user", "age"], ["desc", "asc"]);
+      console.log(output1);
+      console.log(output2);
+      console.log(output3);
+      console.log(output4);
+    </script>
+  </head>
+  <body></body>
+</html>

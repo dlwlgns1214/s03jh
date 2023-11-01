@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백함수</title>
+    <script>
+      function lol(heroName, level = 1, callback = fire) {
+        document.write(`${heroName}님이 ${level}레벨이 되셨습니다.<br>`);
+        if (level > 5) {
+          document.write("궁극기를 시전합니다.<br>");
+          callback(level);
+        } else {
+          document.write("평타를 때립니다.<br>");
+        }
+      }
+      function fire(ff) {
+        for (let i = 1; i < ff + 1; i++) {
+          document.write(`${ff}랩이어서 ${i}번째 메테오를 던집니다.<br>`);
+        }
+      }
+      function ice(ii) {
+        for (let i = 1; i < ii; i++) {
+          document.write(`${i * 2}개의 아이스 조각을 던집니다.<br>`);
+        }
+      }
+      function slow(ss) {
+        for (let i = 1; i < ss; i++) {
+          document.write(`${i}회 공격하여 ${i}% 이동 속도를 줄입니다.<br>`);
+        }
+      }
+      lol("홍길동", 4);
+      lol("소서", 6);
+      lol("바바", 10, slow);
+      lol("소서리스", 9, ice);
+    </script>
+  </head>
+  <body></body>
+</html>

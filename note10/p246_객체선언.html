@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체</title>
+    <script>
+      const obj = {
+        제품명: "망고", // 속성
+        유형: "당절임",
+        성분: "망고",
+        원산지: "필리핀",
+        바코드: [11, 22, 33, 44, 55],
+        기능: function (text = "쌀밥") {
+          console.log(this.유형 + text + " 정말 맛있음!");
+          return 10000;
+        }, // 메소드
+        검증: function () {
+          return this;
+        },
+      };
+
+      console.log(obj["유형"]);
+      console.log(obj.성분);
+      console.log(obj.바코드);
+      console.log(obj.기능());
+      console.log(obj.기능("호떡"));
+      console.log(obj.검증());
+    </script>
+  </head>
+  <body></body>
+</html>

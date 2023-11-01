@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const n = Number("숫자아님");
+      console.log(typeof n);
+      console.log(n); //Nan(Not a number : 타입만 숫자, 진짜 숫자는 아니라는 의미)
+      console.log(NaN === n);
+      console.log(Number.isNaN(n));
+
+      const m = Number("숫자로 변환할 수 없는 경우"); //undefined
+      m; //NaN
+      m === NaN; //false
+      Number.isNaN(m); //true
+    </script>
+  </head>
+  <body></body>
+</html>

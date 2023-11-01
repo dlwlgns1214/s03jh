@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let ct = 0;
+      function cb() {
+        ct++;
+        console.log(`1초마다 실행됩니다. ${ct}번째`);
+      }
+
+      console.log("제가 1 입니다.");
+      setInterval(cb, 1000);
+      setTimeout(() => {
+        console.log("저는 2 입니다.");
+      }, 0);
+      console.log("제가 3 입니다.");
+    </script>
+  </head>
+  <body></body>
+</html>
