@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체 기반 다중 할당</title>
+    <script>
+      const obj = {
+        name: "홍길동",
+        age: "22",
+        power: "80%",
+        secret: "아버지라 못 부름",
+      };
+      const { name, age } = obj;
+      console.log(name, age); // 출력값 : 홍길동 22
+      const { name: a, age: b } = obj; // 출력값 - name: 홍길동, age: 22
+      console.log(a, b); // 출력값 - a:'홍길동', b:'22'
+    </script>
+  </head>
+  <body></body>
+</html>

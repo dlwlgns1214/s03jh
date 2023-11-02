@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.294 배열 기반의 다중 할당</title>
+    <script>
+      let [a, b] = [1, 2];
+      console.log(a, b); //1 2
+      [a, b] = [b, a];
+      console.log(a, b); //2 1
+      let arr = [1, 2, 3, 4, 5];
+      const [a1, b1, c1] = arr;
+      console.log(a1, b1, c1); //1 2 3
+    </script>
+  </head>
+  <body></body>
+</html>
