@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.352~354(누적예제7-2-13)</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const input = document.querySelector("#todo");
+        const todoList = document.querySelector("#list");
+        const addButton = document.querySelector("#add-button");
+
+        const addTodo = () => {
+          console.log("addTodo가 실행됨.");
+          const item = document.createElement("div");
+          const checkbox = document.createElement("input");
+          const text = document.createElement("span");
+          const button = document.createElement("button");
+
+          //버튼을 누를 때 요소 배가시키기
+          todoList.appendChild(item).append(checkbox, text, button);
+          //체크박스 만들기
+          checkbox.type = "checkbox"; //input의 속성에 체크박스 타입을 넣는다.
+
+          checkbox.addEventListener("change", () => {
+            if (event.target.checked) {
+              item.style.textDecoration = "line-through";
+            } else {
+              item.style.textDecoration = "";
+            }
+            // 위 3줄과 같은 내용임 item.style.textDecoration = (event.target.checked ? "line-through" : "")
+          });
+
+          text.textContent = input.value; //input의 내용 넣기
+          input.value = ""; //input의 내용비우기
+          button.textContent = "제거하기"; //button 설정하기
+          button.removeEventListener("click", removeTodo);
+        };
+        addButton.addEventListener("click", addTodo);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>할 일 목록</h1>
+    <input type="text" id="todo" />
+    <button id="add-button">추가하기</button>
+    <div id="list"></div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.334(별 움직이기)</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const star = document.querySelector("h1");
+        star.style.position = "absolute";
+
+        let [x, y] = [0, 0];
+        const block = 20;
+        const print = () => {
+          star.style.left = `${x * block}px`;
+          star.style.top = `${y * block}px`;
+        };
+        print();
+
+        document.addEventListener("keydown", (event) => {
+          console.log(event);
+          switch (event.key) {
+            case "ArrowLeft":
+              x -= 1;
+              break;
+            case "ArrowUp":
+              y -= 1;
+              break;
+            case "ArrowRight":
+              x += 1;
+              break;
+            case "ArrowDown":
+              y += 1;
+              break;
+          }
+          print();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>⭐</h1>
+    <img src="p1.jpg" />
+  </body>
+</html>
