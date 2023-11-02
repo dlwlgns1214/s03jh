@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.311 문서 객체 이해</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log(document.body);
+        const h1 = document.querySelector("h1");
+        console.log(h1);
+        const start = document.querySelector(".start");
+        console.log(start);
+        const best = document.querySelector("#best");
+        console.log(best);
+        const type = document.querySelector('[type="text"]');
+        const qAll = document.querySelectorAll(".list"); //배열에 담김(유사배열 - 배열의 기능 중 일부를 쓸 수 있음.. 예-foreach)
+        console.log(qAll);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>저는 Body에 들어있는 내용입니다.</h1>
+    <div class="start">
+      식사 리스트
+      <ul>
+        <li class="list">아침:토스트</li>
+        <li class="list" id="best">점심:국밥</li>
+        <li class="list">저녁:라면</li>
+        <li>야식 : <input type="text" placeholder="원하는 야식?" /></li>
+      </ul>
+    </div>
+    <div class="end">이상 끝 입니다.</div>
+  </body>
+</html>

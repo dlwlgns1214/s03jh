@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.321(문서 객체 이동하기, body생략ver)</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        //문서 객체 읽어들이고 생성하기
+        const div = document.createElement("div");
+        const div2 = document.createElement("div");
+        const h1 = document.createElement("h1");
+
+        //body에 붙여넣기
+        document.body.append(div, div2);
+        //append는 메소드체이닝이 불가능하다. return 없음. text 삽입가능
+        // document.body.appendChild(div2).append(h1); //메소드체이닝 가능
+
+        div.innerHTML = `<h1>첫 번째 div 태그</h1>`; //textContent는 h1태그가 적용안됨
+        div2.innerHTML = `<hr><h1>두 번째 div 태그</h1> `;
+        h1.textContent = "내부의 h1"; //자기가 알아서 커질거라 따로 h1태그를 입력하지 않았음.
+        //서로 번갈아가면서 실행하는 함수 구현
+        const divOn = () => {
+          div.appendChild(h1);
+          setTimeout(div2On, 1000);
+        };
+        const div2On = () => {
+          div2.appendChild(h1);
+          setTimeout(divOn, 1000);
+        };
+        divOn();
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

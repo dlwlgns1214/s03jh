@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그라데이션</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const divs = document.querySelectorAll("div");
+
+        divs.forEach((v, i, a) => {
+          const val = i * 10;
+          v.style.height = "10px";
+          v.style.backgroundColor = `rgb(${val},${val},${val})`;
+          v.style.color = "blue";
+          v.style.fontSize = "0.5em";
+          if (i < 13) {
+            v.style.color = "white";
+          } else {
+            v.style.color = "black";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+    <div>06</div>
+    <div>07</div>
+    <div>08</div>
+    <div>09</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+    <div>16</div>
+    <div>17</div>
+    <div>18</div>
+    <div>19</div>
+    <div>20</div>
+    <div>21</div>
+    <div>22</div>
+    <div>23</div>
+    <div>24</div>
+    <div>25</div>
+  </body>
+</html>

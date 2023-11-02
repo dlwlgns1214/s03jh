@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 수정</title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        background-color: burlywood;
+      }
+    </style>
+    <script>
+      function ch() {
+        const h1 = document.querySelector("h1");
+        h1.innerHTML = "변경 되었습니다!";
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector("#new");
+        document.addEventListener("click", ch);
+        const div = document.querySelector("div");
+        div.addEventListener("click", ch);
+        const h1 = document.querySelector("h1");
+        h1.addEventListener("click", ch);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <button onclick="ch()">구형변경</button>
+    <button id="new">신형변경</button>
+    <div></div>
+  </body>
+</html>
