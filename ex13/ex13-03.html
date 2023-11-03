@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+      //데이터 가공은 여기서!
+      const label = ["월", "화", "수", "목", "금", "토", "일"];
+      const data = [12, 19, 3, 5, 2, 3, 11];
+
+      new Chart(ctx, {
+        type: "doughnut", //bar:막대, line:꺾은선
+        data: {
+          labels: label,
+          datasets: [
+            {
+              label: "# of Votes",
+              data,
+              borderWidth: 3, //굵기
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true, //true : 0부터 시작, false : 최저값부터 시작
+            },
+          },
+        },
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
