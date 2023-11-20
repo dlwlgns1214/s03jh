@@ -3,29 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>20231106 UI설계 평가</title>
+
+    <!-- 외부 css 및 스크립트 -->
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js" defer></script>
+    <script src="./js/script.js"></script>
   </head>
   <body>
     <div class="main">
-      <header><h1>할 일 목록(To Do List)</h1></header>
+      <!--메인 제목-->
+      <header><h1>UI구현 평가</h1></header>
+
+      <!--컨테이너-->
       <div class="container">
+        <!--네비게이션-->
         <nav>
           <ul>
-            <li><a href="https://www.naver.com">할일리스트</a></li>
-            <li><a href="https:www.google.com">메모장</a></li>
-            <li><a href="https://www.daum.net">수정사항</a></li>
+            <li><a href="https://www.naver.com/">할일 리스트</a></li>
+            <li><a href="https://www.google.co.kr/">메모장</a></li>
+            <li><a href="https://www.daum.net/">수정사항</a></li>
           </ul>
         </nav>
+
+        <!--섹션-->
         <section id="todoBox">
+          <!--소제목-->
           <h2>할 일 목록</h2>
+
+          <!--입력창-->
           <input type="text" id="todo" />
+
+          <!--추가버튼-->
           <button id="add-button">추가하기</button>
+
+          <!-- 추가한 할일 목록 리스트 -->
           <div id="list"></div>
         </section>
+
+        <!--aside-->
         <aside><img src="./img/ad.JPG" alt="" /></aside>
       </div>
+
+      <!--footer-->
       <footer>Copyright 이지훈</footer>
     </div>
   </body>
